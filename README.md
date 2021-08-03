@@ -54,4 +54,12 @@ I would like to be able to see the transaction dates, credit/debit amount and ba
 ## CRC Cards
 ![CRC Cards](/images/CRC_cards.png)
 
+## CRC Cards
+Whilst working on the balance, deposits and withdrawals, I thought that I should put in a fail safe so that a user cannot withdraw an amount that exceeds the balance.
+<br>
+I initially thought it would be nice to raise an error but soon realised it didnt look so nice, so I amended the withdraw method to return 'Invalid amount' as a string rather than use it as an error message.
+
+![CRC Cards](/images/error_message.png)
+<br><br>
+![CRC Cards](/images/error_message_string.png)
 
