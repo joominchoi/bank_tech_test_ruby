@@ -13,7 +13,11 @@ class Account
   end
 
   def withdraw(amount)
-    @balance -= amount
+    if amount <= @balance
+      @balance -= amount
+    else 
+      'Invalid amount' if amount > @balance
+    end
   end
 
 end
@@ -22,5 +26,5 @@ end
 # puts account.balance
 # account.deposit(1000)
 # puts account.balance
-# account.withdraw(500)
+# account.withdraw(5000)
 # puts account.balance
