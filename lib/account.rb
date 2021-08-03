@@ -5,11 +5,15 @@ class Account
   end
 
   def balance
-    "£" + "#{@balance}"
+    "£#{@balance}"
   end
 
   def deposit(amount)
     @balance += amount
+  end
+
+  def withdraw(amount)
+    @balance -= amount
   end
 
 end
@@ -17,4 +21,6 @@ end
 # account = Account.new
 # puts account.balance
 # account.deposit(1000)
+# puts account.balance
+# account.withdraw(500)
 # puts account.balance

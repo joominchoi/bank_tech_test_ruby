@@ -10,9 +10,17 @@ describe Account do
   end
 
   describe '#deposit' do
-    it 'increase the balance' do
+    it 'deposits and updates the balance' do
       account.deposit(1000)
       expect(account.balance).to eq('£1000')
+    end
+  end
+
+  describe '#withdraw' do
+    it 'withdraws and updates thebalance' do
+      account.deposit(1000)
+      account.withdraw(500)
+      expect(account.balance).to eq('£500') 
     end
   end
 
