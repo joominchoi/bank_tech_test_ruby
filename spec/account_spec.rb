@@ -14,6 +14,10 @@ describe Account do
       account.deposit(1000)
       expect(account.balance).to eq('£1000')
     end
+
+    it 'returns an error message string if deposit amount is equal to or below 0' do
+      expect(account.deposit(-1000)).to eq('Invalid amount. Please enter a value over 0')
+    end
   end
 
   describe '#withdraw' do
@@ -24,7 +28,7 @@ describe Account do
     end
 
     it 'returns an error message string if withdrawal amount exceeds balance' do
-      expect(account.withdraw(500)).to eq('Invalid amount')
+      expect(account.withdraw(500)).to eq('Insufficient funds')
     end
   end
 

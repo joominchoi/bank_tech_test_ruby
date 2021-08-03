@@ -9,14 +9,19 @@ class Account
   end
 
   def deposit(amount)
-    @balance += amount
+    if amount > 0
+      @balance += amount
+    else
+      'Invalid amount. Please enter a value over 0'
+    end
+
   end
 
   def withdraw(amount)
     if amount <= @balance
       @balance -= amount
     else 
-      'Invalid amount' if amount > @balance
+      'Insufficient funds' 
     end
   end
 
