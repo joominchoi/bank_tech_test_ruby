@@ -24,3 +24,29 @@ date || credit || debit || balance
 13/01/2012 || 2000.00 || || 3000.00
 10/01/2012 || 1000.00 || || 1000.00
 ```
+
+## User Stories
+
+```
+As a client,
+So that I can save money,
+I would like to be able to deposit money into my account.
+```
+
+```
+As a client,
+So that I can access money, 
+I would like to be able to withdraw money from my account.
+```
+
+```
+As a client,
+So that I can keep a record,  
+I would like to be able to print an account statement.
+```
+
+```
+As a client,
+So that I can track my transaction history,
+I would like to be able to see the transaction dates, credit/debit amount and balance on the account statement. 
+```
