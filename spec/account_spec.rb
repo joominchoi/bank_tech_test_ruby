@@ -2,6 +2,7 @@ require 'account'
 
 describe Account do
   let(:account) { Account.new }
+  let(:date) {Time.new.strftime('%d/%m/%y')}
   
   describe '#balance' do
     it 'displays the current balance' do
@@ -13,6 +14,11 @@ describe Account do
     it 'deposits and updates the balance' do
       account.deposit(1000)
       expect(account.balance).to eq('£1000')
+    end
+
+    it 'updates the statement' do
+      account.deposit(1000)
+      expect(account.statement).to include("#{date} || £1000 || || #{account.balance}")
     end
 
     it 'returns an error message string if deposit amount is equal to or below 0' do
