@@ -20,12 +20,14 @@ class Account
   end
 
   def withdraw(amount)
-    if amount <= @balance
+    if amount == 0
+      'Invalid amount. Please enter a value over 0'
+    elsif amount <= @balance
       @balance -= amount
       @transactions << debit(amount)
-      "Withdrawal amount: £#{amount}"
+      "Withdrawal amount: £#{amount}" 
     else 
-      'Insufficient funds' 
+      'Insufficient funds'
     end
   end
 
