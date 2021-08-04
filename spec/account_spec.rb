@@ -2,7 +2,7 @@ require 'account'
 
 describe Account do
   let(:account) { Account.new }
-  let(:date) {Time.new.strftime('%d/%m/%y')}
+  let(:date) {Time.new.strftime('%d/%m/%Y')}
   
   describe '#balance' do
     it 'displays the current balance' do

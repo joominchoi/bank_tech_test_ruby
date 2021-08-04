@@ -41,7 +41,7 @@ private
 
 def date
   time = Time.new
-  time.strftime('%d/%m/%y')
+  time.strftime('%d/%m/%Y')
 end
 
 def credit(amount)
