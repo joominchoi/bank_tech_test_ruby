@@ -6,13 +6,14 @@ class Account
   end
 
   def balance
-    "£#{@balance}"
+    "Current balance: £#{@balance}"
   end
 
   def deposit(amount)
     if amount > 0
       @balance += amount
       @transactions << credit(amount)
+      "Deposit amount: £#{amount}"
     else
       'Invalid amount. Please enter a value over 0'
     end
@@ -22,6 +23,7 @@ class Account
     if amount <= @balance
       @balance -= amount
       @transactions << debit(amount)
+      "Withdrawal amount: £#{amount}"
     else 
       'Insufficient funds' 
     end
@@ -35,7 +37,6 @@ class Account
   end
 
 end
-
 
 private
 
