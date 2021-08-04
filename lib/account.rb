@@ -28,7 +28,10 @@ class Account
   end
 
   def statement
-    @transactions.join
+    puts header
+    @transactions.each do |transaction|
+      puts transaction
+    end
   end
 
 end
@@ -47,4 +50,8 @@ end
 
 def debit(amount)
   "#{date} || || £#{amount} || #{balance}"
+end
+
+def header
+  "date || credit || debit || balance"
 end
