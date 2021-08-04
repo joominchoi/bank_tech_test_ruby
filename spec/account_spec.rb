@@ -16,7 +16,7 @@ describe Account do
       expect(account.balance).to eq('£1000')
     end
 
-    it 'updates the statement' do
+    it 'updates the statement with date of deposit, deposit value, current balance' do
       account.deposit(1000)
       expect(account.statement).to include("#{date} || £1000 || || #{account.balance}")
     end
@@ -32,6 +32,13 @@ describe Account do
       account.withdraw(500)
       expect(account.balance).to eq('£500') 
     end
+
+    it 'updates the statement with date of withdrawal, withdrawal value, current balance' do
+      account.deposit(1000)
+      account.withdraw(500)
+      expect(account.statement).to include("#{date} || || £500 || #{account.balance}")
+    end
+
 
     it 'returns an error message string if withdrawal amount exceeds balance' do
       expect(account.withdraw(500)).to eq('Insufficient funds')
