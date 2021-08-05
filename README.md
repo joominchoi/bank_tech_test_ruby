@@ -51,6 +51,34 @@ So that I can track my transaction history,
 I would like to be able to see the transaction dates, credit/debit amount and balance on the account statement. 
 ```
 
+## Installation
+Open the directory that you would like to clone the repository to:
+```
+$ cd Projects
+```
+Clone the repository:
+```
+$ git clone https://github.com/jooomin/bank_tech_test_ruby.git
+```
+Open the directory:
+```
+$ cd bank_tech_test_ruby
+```
+Install gems:
+```
+$ bundle install
+```
+
+## Usage
+
+### Running RSpec Tests
+```
+$ rspec
+```
+
+
+
+
 ## CRC Cards
 ![CRC Cards](/images/CRC_cards.png)
 
